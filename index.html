@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<title>Jeopardy</title>
+
+		<link rel="stylesheet" href="style.css">
+		<script src="https://unpkg.com/jquery"></script>
+    	<script src="https://unpkg.com/axios/dist/axios.js"></script>
+    	<script src="https://unpkg.com/lodash"></script>
+		<script src="script.js"></script>
+	</head> 
+	<body>
+
+		<section id="Jeopardy-Generator">
+
+			<h1>Jeopardy</h1>
+
+			<form id="color-form">
+
+				<br>
+				<label for="iamge-input">URL:</label>
+				<input
+						type="text"
+						id="iamge-input"
+						placeholder="image or embed youtube video (https://www.youtube.com/embed/VEDIO_ID)"
+				>
+				<br>
+				<label for="text-top-input">Questions:</label>
+				<input
+						type="text"
+						id="text-top-input"
+						placeholder="This is the signature Burger at Burger King"
+						required
+				>
+				<br>
+				<label for="text-bottom-input">Correct Response:</label>
+				<input
+						type="text"
+						id="text-bottom-input"
+						placeholder="What is the Whopper"
+				>
+				<br>
+				<label for="text-score-input">Score:</label>
+				<input
+						type="text"
+						id="text-score-input"
+						placeholder="100"
+						required
+				>
+				<br>
+				<button id="new-box-button" type="submit">New Question!</button>
+				<br>
+	
+	
+			</form>
+
+			<button id="new-game-button">Start the Game!</button>
+		</section>
+
+		<section id="Jeopardy-Content">
+			<label id="box-container-header"></label>
+			<table id="box-container">
+			</table>
+	  
+			<div id="active-clue">
+			  <!-- When a clue is clicked, show the question here. -->
+			  <!-- When a question is clicked, show the answer here. -->
+			  <!-- When the game ends, show it here. -->
+			</div>
+		  </section>
+	  
+		  <div
+			  id="spinner"
+			  class="disabled"
+		  >
+			<i class="fa fa-spin fa-spinner"></i>
+		  </div>
+
+		<div id="full-clone">
+			<!-- You'll create the boxes here. -->
+		</div>
+	</body>
+</html>
